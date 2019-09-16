@@ -15,7 +15,7 @@ class CreateArticleGalleriesTable extends Migration
     {
         Schema::create('article_galleries', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->unsignedBigInteger('article_id')->index();
+            $table->bigInteger('article_id')->unsigned();
             $table->foreign('article_id')
                 ->references('id')->on('articles')
                 ->onDelete('cascade');

@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Auth;
 
 use App\Http\Controllers\Controller;
+use App\Mail\EmailConfirmation;
 use App\User;
 use Illuminate\Foundation\Auth\RegistersUsers;
 use Illuminate\Support\Facades\Hash;
@@ -75,7 +76,7 @@ class RegisterController extends Controller
         ]);
         $addAttributes = $user->attributes()->create([
             'fullname' => $data['fullname'],
-            'avatar' => 'uploads/avatars/2/no-user.png',
+            'avatar' => 'uploads/avatars/no-user.png',
         ]);
 
         $token = $user->getEmailConfirmationToken();
