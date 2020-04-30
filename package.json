@@ -12,7 +12,7 @@
     "devDependencies": {
         "vue": "^2.6.10",
         "bootstrap": "^4.3.1",
-        "jquery": "^3.4.1",
+        "jquery": "^3.5.0",
         "axios": "^0.19",
         "cross-env": "^5.2.1",
         "laravel-mix": "^4.0.7",
